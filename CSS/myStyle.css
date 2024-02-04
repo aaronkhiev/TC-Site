@@ -19,3 +19,9 @@ body {
     margin-right: auto;
     width: 460px;
 }
+
+#title {
+    font-family: fantasy;
+    color: rgb(77, 64, 10);
+    text-align: center;
+}
