@@ -1,7 +1,8 @@
 .topnav {
     background-color: #834f27dd;
     overflow: hidden;
-  }
+    border-radius: 25px;
+ }
 
 .topnav a {
     float: left;
