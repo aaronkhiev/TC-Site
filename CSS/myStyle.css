@@ -1,11 +1,21 @@
 p {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(13, 4, 51);
 }
 
-body {
-    background-color: rgba(245, 208, 152, 0.733);
+#content {
+    background-color: rgb(197, 167, 121);
+    margin: auto; /* Center the content horizontally */
+    width: 80%; /* Set the width of the content */
+    border: 3px solid darkgoldenrod; /* Border styling */
+    padding: 10px; /* Padding around the content */
 }
+
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2012/03/01/00/21/bridge-19513_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure the background image covers the entire screen */
+  }
 
 .Dice {
     display: block;
@@ -14,15 +24,20 @@ body {
 }
 
 #logo {
-    display: block;
+    vertical-align: middle;
+    width: 460px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    width: 460px;
 }
 
 #title {
-    font-family:fantasy, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(77, 64, 10);
     text-align: center;
     font-size: 30px;
+}
+
+#Contact {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
