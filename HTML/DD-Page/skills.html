@@ -6,9 +6,10 @@
     <meta charset="UTF-8">
     <title>Fantasy Table Top Compendium Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../CSS/guide.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/myStyle.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/navigation.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/dice.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/skillsStyle.css">
 </head>
 
 <body>
@@ -19,9 +20,6 @@
         <hr />
 
         <h1 id="title">The Table Top Compendium</h1>
-        <hr />
-
-        <h1>Navigation</h1>
         <hr />
 
         <div class="topnav">
@@ -35,51 +33,185 @@
 
         <h2>Ability Scores</h2>
             <p>
-                In the world of Dungeons & Dragons, all of your physical, mental, maybe even magical
-                abilities are all measured in ability scores.
-                <br>
-                <br>
-                There are a total of 6 abilities provide a quick description of every creature's physical and mental characteristics:
-                <ul>
-                    <!-- Maybe draw icons for each stat? With explanations on hover -->
-                    <li>Strength, measuring physical power.</li>
-                    <li>Dexterity, measuring agility.</li>
-                    <li>Constitution, measuring endurance.</li>
-                    <li>Intelligence, measuring reasoning and memory.</li>
-                    <li>Wisdom, measuring perception and insight.</li>
-                    <li>Charisma, measuring force of personality.</li>
-                </ul>
-                <br>
-                Strength is pretty straight forward and refers to your brawns and muscle power.
-                Can you deadlift an elephant over your head? Can you control your strength just
-                enough to break a window without hurting someone? 
+                In the world of Dungeons & Dragons, all of your character's physical, mental, maybe even magical abilities are all measured in ability scores.
             </p>
-            <br>
-        
+
+            <p>
+                There are a total of 6 abilities provide a quick description of every creature's physical and mental characteristics:
+            </p>
+            <ul>
+                <!-- Maybe draw icons for each stat? With explanations on hover -->
+                <li><strong>Strength</strong>, measuring physical power.</li>
+                <li><strong>Dexterity</strong>, measuring agility.</li>
+                <li><strong>Constitution</strong>, measuring endurance.</li>
+                <li><strong>Intelligence</strong>, measuring reasoning and memory.</li>
+                <li><strong>Wisdom</strong>, measuring perception and insight.</li>
+                <li><strong>Charisma</strong>, measuring force of personality.</li>
+            </ul>
+            <p>
+                <strong>Strength</strong> is pretty straight forward and refers to your brawns and muscle power.
+                Can you deadlift an elephant over your head? Can you control your strength just
+                enough to break a window without hurting someone? While this ability indicates physical
+                prowess, it also indicates how well you can control that strength.
+            </p>
+            <p>
+                <strong>Dexterity</strong> measures your agility, in other words your reaction time, reflexes, to
+                even precision and balance. Low dexterity often means you're generally a bit clumsy
+                and may miss a target your throwing something at whereas those with higher dexterity 
+                scores may hit a target spot on. This also extends to how well you can dodge out of
+                the way and maintain balance. Outside of the more physically weary examples, this ability
+                can also indicate some degree of finesse especially in lockpicking, committing tax fraud,
+                forging documents, and more very cheeky crimes.
+            </p>
+            <p>
+                <strong>Constitution</strong> refers to your physical endurance. It determines how well
+                you can take a hit and how many hits you can take. Aside from physical attacks, this ability
+                score also determines how well you can resist poisons, physical effects such as paralysis, to
+                even just maintaining consiousness in moments of physical injury or trying not to pass out from
+                one too many drinks at the local tavern.
+            </p>   
+            <p>
+                <strong>Intelligence</strong> is an interesting ability score that measures your logic, reasoning,
+                and memory recall not just smarts. This ability indicates how well you can recall information you've previously
+                encountered along with how much information you've gathered. In the event you need to solve a puzzle,
+                or dig through and search through areas, to even recalling an enemies weakness or the physics of
+                lobbing a mystical ball of fire at an enemies head, intelligence is key.
+            </p>
+            <p>
+                <strong>Wisdom</strong> is the more misinterpreted ability when beginners first run into it. While it is
+                tempting to say that this is how wise your character is, it extends a bit further than that. Through your wisdom
+                you can also gauge someone's true intentions, if they're lying or telling the truth. This also determines how perceptive
+                you are as well with higher wisdom scores being able to hear or see someone stalking behind you just from a quick glance.
+                With wisdom, you pick up on what others may fail to see.
+            </p>
+            <p>
+                <strong>Charisma</strong>, the embodiment of your personality or rather your force of personality and how amicable you are
+                in the eyes of others. While it is tempting to simply pass of this score as a matter of mastery of flirting, charisma is much
+                more than that. This score can determine how good of a leader you are in inspiring others, to even having a silver tongue or lying
+                out of what could be a dangerous scenario.
+            </p>
+        <hr />
+            
+        <h2>Dice Rolls</h2>
+            <p>
+                All of these abilities and scores are great and all but how do we put them into
+                practice? As you navigate through your campaign, you will use dice to roll which
+                determines how well you perform a task or action. You can take a look at the numerous
+                types of dice you can use in the slideshow. You can also test out rolling different
+                dice yourself in this section and allocating those numbers to abilities for a blank character!
+            </p>
+            <div class="skill-group">
+                <button onclick="writeScore('str')">Strength</button>
+                <button onclick="writeScore('dex')">Dexterity</button>
+                <button onclick="writeScore('con')">Constitution</button>
+                <button onclick="writeScore('int')">Intelligence</button>
+                <button onclick="writeScore('wis')">Wisdom</button>
+                <button onclick="writeScore('cha')">Charisma</button>
+            </div>
+            <p id="centerability"><strong>Rolled Stats</strong></p>
+            <div id="alignScore">
+                <div class="skill-score">
+                    <p id="strscore"></p>
+                    <span class="scoreCap"><strong>Strength Score</strong></span>
+                </div>
+                <div class="skill-score">
+                    <p id="dexscore"></p>
+                    <span class="scoreCap"><strong>Dexterity Score</strong></span>
+                </div>
+                <div class="skill-score">
+                    <p id="conscore"></p>
+                    <span class="scoreCap"><strong>Constitution Score</strong></span>
+                </div>
+                <div class="skill-score">
+                    <p id="intscore"></p>
+                    <span class="scoreCap"><strong>Intelligence Score</strong></span>
+                </div>
+                <div class="skill-score">
+                    <p id="wisscore"></p>
+                    <span class="scoreCap"><strong>Wisdom Score</strong></span>
+                </div>
+                <div class="skill-score">
+                    <p id="chascore"></p>
+                    <span class="scoreCap"><strong>Charisma Score</strong></span>
+                </div>
+            </div>
+            <p>
+                There are six different types of dice. This includes a d4, d6, d8, d10, d12, and d20.
+                The number after the "d" indicates the number of sides the dice has. They all serve
+                different purposes from rolling how well you perform a task, to dealing damage. Most
+                of your campaign will be spend rolling d20s!
+            </p>
+            
+            <div id="dsample">
+                <div class="diceItem">
+                    <img src="../../Images/D20P.png" alt="Image of D20">
+                    <span class="caption">This is a D20, the bread and butter of D&D.</span>
+                </div>
+                <div class="diceItem">
+                    <img src="../../Images/D12.png" alt="Image of D12">
+                    <span class="caption">This is a D12! Mostly used for damage.</span>
+                </div>
+                <div class="diceItem">
+                    <img src="../../Images/D4.png" alt="Image of D4">
+                    <span class="caption">This is a D4! You'll use this for damage or effects.</span>
+                </div>
+            </div>
+        <hr />
+
         <h2>Skills</h2>
             <p>
-                 
+                Once you have established your ability scores, depending on how high or low those scores are can determine how well versed you are
+                with a number of skills. There are a number of skills ranging from <strong>Stealth</strong> which is how good you are at sneaking around
+                and hiding, to <strong>Deception</strong> which indicates your ability to lie and do it well.
             </p>
-            <br>
+            <p>
+                You can view all of the skills here and there corresponding stat and description:
+            </p> 
+            <a href="https://5e.d20srd.org/indexes/skills.htm">All Skills</a>
         
+        <hr />    
         <h2>Ability Checks</h2>
             <p>
-                    
+                During your campaign, your dungeon master may prompt you to perform a roll of some sort. These are called "Checks" or skill checks and
+                can vary based on the type of action you are trying to achieve. For instance:
             </p>
-            <br>
-        
+            <p>
+                <em>
+                    "You look around you to see nothing but the rotting corpses of the city guards roaming towards you searching for their next victim to feast
+                    upon. What would you like to do?"
+                    <br>- The Dungeon Master
+                    <br>
+                    <br>
+                    "Could I try to hide away and wait for the hoard to pass?"
+                    <br>- The Player
+                    <br>
+                    <br>
+                    "Roll a stealth check."
+                    <br>- The Dungeon Master
+                </em>
+            </p>
+            <p>    
+                During these checks, you will be asked to roll a dice depending on what the Dungeon Master specifies. In nearly
+                all cases, you will be rolling a D20, also knows as a twenty sided dice. After rolling your dice, you will add 
+                a proficiency modifier/modifier to that roll which comes from how high you ability scores. A good rule of thumb
+                is the higher your ability score, the higher your modifer for certain skills. 
+            </p>
+        <hr />
         <h2>Attack Rolls</h2>
             <p>
-                    
+                When you want to attack something or someone you make an attack roll against. Depending on your weapon, class, or
+                character background you can get penalties or bonuses to this roll. We'll get more into it through the action economy
+                and combat. To succeed on an attack roll you must beat the target's armor class. 
             </p>
-            <br>
         
+        <hr />
         <h2>Saving Throws</h2>
             <p>
-                    
+                Saving throws occur when an undesired effect were to affect you. This can include being poisoned, dodging a fireball,
+                shaking off the effects of mind control, avoiding spell effects, and much much more. Saving throws are usually announced
+                by either the Dungeon Master or the Player when they cast a spell or initiate an effect. You can find some examples in
+                the spellcasting section and the action economy.
             </p>
-            <br>
-
         <hr />
 
         <h2>Learn More Here</h2>
@@ -90,8 +222,6 @@
             <a href="character.html"> Character Etiquette</a>
         </div>
 
-        <hr />
-        <br />
         <div id="Contact">
             <hr />
             <h3>Contact Us!</h3>
@@ -103,6 +233,7 @@
             </address>
         </div>
     </div>
+    <script src="../../Javascript/dice.js"></script>
 </body>
 
 </html>

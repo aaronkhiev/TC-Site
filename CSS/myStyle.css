@@ -14,17 +14,23 @@ p {
 body {
     background-image: url("https://cdn.pixabay.com/photo/2012/03/01/00/21/bridge-19513_1280.jpg");
     background-repeat: no-repeat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(13, 4, 51);
     background-size: cover; /* Ensure the background image covers the entire screen */
   }
 
-.Dice {
-    display: block;
+.Dice img {
     float: left;
     margin-right: 25px;
+    width: 85px;
+    height: 90px;
+}
+
+.Dice {
+    margin-bottom: 25px;
 }
 
 #logo {
-    vertical-align: middle;
     width: 460px;
     max-width: 100%;
     margin-left: auto;
@@ -40,4 +46,5 @@ body {
 
 #Contact {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
 }

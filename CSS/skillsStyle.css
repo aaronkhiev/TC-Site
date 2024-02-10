@@ -1,0 +1,54 @@
+#dsample {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.diceItem img {
+    width: 85px;
+    height: 90px;
+}
+
+.diceItem {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    margin-inline: 20px;
+}
+
+.caption {
+    display: block;
+    text-align: center;
+}
+
+#alignScore {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+  
+.skill-score p {
+    background-color: #834f27dd;
+    color: aliceblue;
+    padding: 40px 24px;
+    border-radius: 25px;
+    margin-inline: 51px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+}
+
+.scoreCap {
+    display: block;
+    text-align: center;
+    margin-inline: 10px;
+}
+
+#centerability {
+    text-align: center;
+    background-color: #c19d0edd;
+    padding: 10px 24px;
+    border-radius: 25px;
+}
