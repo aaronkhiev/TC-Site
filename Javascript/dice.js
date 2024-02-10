@@ -38,7 +38,6 @@ function writeScore(ability) {
     switch (ability) {
         case 'str':
             blankchar.str = rollScore;
-            console.log(blankchar.str);
             document.querySelector("#strscore").innerText = blankchar.str;
             break;
         case 'dex':
