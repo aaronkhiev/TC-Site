@@ -6,9 +6,12 @@
     <meta charset="UTF-8">
     <title>Fantasy Table Top Compendium Homepage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../CSS/guide.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/myStyle.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/navigation.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/dice.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/skillsStyle.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/button.css">
+
 </head>
 
 <body>
@@ -21,9 +24,6 @@
         <h1 id="title">The Table Top Compendium</h1>
         <hr />
 
-        <h1>Navigation</h1>
-        <hr />
-
         <div class="topnav">
             <a href="../index.html">Home</a>
             <a href="../DD-Page/index.html">The Dungeon Delver's Guide</a>
@@ -33,14 +33,91 @@
         </div>
         <hr />
 
-        <h2>Overview</h2>
+        <h2>Ability Scores</h2>
+            <ul>
+                <!-- Maybe draw icons for each stat? With explanations on hover -->
+                <li><strong>Strength</strong>, measuring physical power.</li>
+                <li><strong>Dexterity</strong>, measuring agility.</li>
+                <li><strong>Constitution</strong>, measuring endurance.</li>
+                <li><strong>Intelligence</strong>, measuring reasoning and memory.</li>
+                <li><strong>Wisdom</strong>, measuring perception and insight.</li>
+                <li><strong>Charisma</strong>, measuring force of personality.</li>
+            </ul>
+        <hr />
+            
+        <h2>Ability Score Generator</h2>
             <p>
-                 
+                The Dungeon Delver Guide on skills let's you play around with rolling dice for certain abilities and figure out
+                what a lower or higher score could mean. After rolling click generate to create a character summary and learn a bit more
+                about higher and lower number modifers and how they scale.
             </p>
-        <hr />
+            <div class="skill-group">
+                <button onclick="writeScore('str')">Strength</button>
+                <button onclick="writeScore('dex')">Dexterity</button>
+                <button onclick="writeScore('con')">Constitution</button>
+                <button onclick="writeScore('int')">Intelligence</button>
+                <button onclick="writeScore('wis')">Wisdom</button>
+                <button onclick="writeScore('cha')">Charisma</button>
+            </div>
+            <p id="centerability"><strong>Rolled Stats</strong></p>
+            <div id="alignScore">
+                <div class="skill-score">
+                    <p id="strscore"></p>
+                    <span class="scoreCap"><strong>Strength Score</strong></span>
+                </div>
+                <div class="skill-score">
+                    <p id="dexscore"></p>
+                    <span class="scoreCap"><strong>Dexterity Score</strong></span>
+                </div>
+                <div class="skill-score">
+                    <p id="conscore"></p>
+                    <span class="scoreCap"><strong>Constitution Score</strong></span>
+                </div>
+                <div class="skill-score">
+                    <p id="intscore"></p>
+                    <span class="scoreCap"><strong>Intelligence Score</strong></span>
+                </div>
+                <div class="skill-score">
+                    <p id="wisscore"></p>
+                    <span class="scoreCap"><strong>Wisdom Score</strong></span>
+                </div>
+                <div class="skill-score">
+                    <p id="chascore"></p>
+                    <span class="scoreCap"><strong>Charisma Score</strong></span>
+                </div>
+            </div>
 
-        <hr />
-        <br />
+        <p id="centerability"><strong>Character Ability Summary</strong></p>
+
+        <button id="gen">Generate</button>
+        
+        <div class="summary">
+            <div class="summarystat">
+                <strong>Strength:</strong>
+                <hr />
+            </div>
+            <div class="summarystat">
+                <strong>Dexterity:</strong>
+                <hr />
+            </div>
+            <div class="summarystat">
+                <strong>Constitution:</strong>
+                <hr />
+            </div>
+            <div class="summarystat">
+                <strong>Intelligence:</strong>
+                <hr />
+            </div>
+            <div class="summarystat">
+                <strong>Wisdom:</strong>
+                <hr />
+            </div>
+            <div class="summarystat">
+                <strong>Charisma:</strong>
+                <hr />
+            </div>
+        </div>
+    
         <div id="Contact">
             <hr />
             <h3>Contact Us!</h3>
@@ -52,6 +129,7 @@
             </address>
         </div>
     </div>
+    <script src="../../Javascript/character.js"></script>
 </body>
 
 </html>

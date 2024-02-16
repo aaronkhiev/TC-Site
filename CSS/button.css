@@ -1,0 +1,15 @@
+#gen {
+    background-color: #834f27dd;
+    float: center;
+    padding: 10px 24px;
+    margin-left: 45.5%;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Add a background color on hover */
+#gen:hover {
+    background-color: #bc1616;
+}

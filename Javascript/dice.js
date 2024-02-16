@@ -10,7 +10,7 @@ function character(str, dex, con, int, wis, cha){
 
 // Generate a number between 1 - 6
 function rollD6() {
-    var d6 = Math.floor(Math.random() * 7) + 1;
+    var d6 = Math.floor(Math.random() * 6) + 1;
     return d6;
 }
 
