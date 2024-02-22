@@ -65,8 +65,12 @@ function writeScore(ability) {
     }
 }
 
+
+// Simplified DOM Element Rewrite with jQuery
 function generateSummary() {
+    // Using .each to run through the list of elements.
     $(".summarystat").each(function(index) { 
+        // By adding and logging index as a parameter, we can access specific elements.
         if (index == 0) {
             if(blankchar.str >= 10) {
                 $(".summarystat")[0].append("You have a high strength score! You're modifier is gonna be fine.");
