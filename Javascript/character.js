@@ -65,115 +65,57 @@ function writeScore(ability) {
     }
 }
 
-function generateSummary1() {
-    $(".summarystat").each(function() { 
-        if ($( this ).is( "#stop" ) ) {
-            $( "span" ).text( "Stopped at div index #" + index );
-            return false;
-          }
-    });
-}
-
-
-// Modify HTML using DOM to generate p tag text.
 function generateSummary() {
-    for (let index = 0; index < item.length; index++) {
-        // Switch statements again, much handier than ifs and also do great for fixed elements and text.
-        switch (index) {
-            case 0:
-                //Strength Message
-                const para = document.createElement("p");
-                const low = document.createTextNode("You have a low strength score...you're modifier is gonna be pretty scrawny.");
-                const high = document.createTextNode("You have a high strength score! You're modifier is gonna be fine.");
-                
-                if(blankchar.str >= 10) {
-                    para.appendChild(high);
-                }
-                else {
-                    para.appendChild(low);
-                }
-                const element = document.getElementsByClassName('summarystat')[0];
-                element.appendChild(para);
-                break;
-            case 1:
-                //Dexterity
-                const para1 = document.createElement("p");
-                const low1 = document.createTextNode("You have a low dexterity score...you're modifier is clumsy...yikes");
-                const high1 = document.createTextNode("You have a high dexterity score! You're modifier is gonna be fine.");
-                
-                if(blankchar.dex >= 10) {
-                    para1.appendChild(high1);
-                }
-                else {
-                    para1.appendChild(low1);
-                }
-                const element1 = document.getElementsByClassName('summarystat')[1];
-                element1.appendChild(para1);
-                break;
-            case 2:
-                //Constitution
-                const para2 = document.createElement("p");
-                const low2 = document.createTextNode("You have a low constitution score...you're modifier is gonna need a doctor.");
-                const high2 = document.createTextNode("You have a high constitution score! You're modifier is gonna be fine.");
-                
-                if(blankchar.con >= 10) {
-                    para2.appendChild(high2);
-                }
-                else {
-                    para2.appendChild(low2);
-                }
-                const element2 = document.getElementsByClassName('summarystat')[2];
-                element2.appendChild(para2);
-                break;
-            case 3:
-                //Intelligence
-                const para3 = document.createElement("p");
-                const low3 = document.createTextNode("You have a low intelligence score...you're modifier is not the brightest...");
-                const high3 = document.createTextNode("You have a high intelligence score! You're modifier is gonna be fine.");
-                
-                if(blankchar.int >= 10) {
-                    para3.appendChild(high3);
-                }
-                else {
-                    para3.appendChild(low3);
-                }
-                const element3 = document.getElementsByClassName('summarystat')[3];
-                element3.appendChild(para3);
-                break;
-            case 4:
-                //Wisdom
-                const para4 = document.createElement("p");
-                const low4 = document.createTextNode("You have a low wisdom score...you're modifier is uh...yeah");
-                const high4 = document.createTextNode("You have a high wisdom score! You're modifier is gonna be fine.");
-                
-                if(blankchar.wis >= 10) {
-                    para4.appendChild(high4);
-                }
-                else {
-                    para4.appendChild(low4);
-                }
-                const element4 = document.getElementsByClassName('summarystat')[4];
-                element4.appendChild(para4);
-                break;
-            case 5:
-                //Charisma
-                const para5 = document.createElement("p");
-                const low5 = document.createTextNode("You have a low charisma score...you ever heard of plastic surgery?");
-                const high5 = document.createTextNode("You have a high charisma score! You're modifier is gonna be fine.");
-                
-                if(blankchar.cha >= 10) {
-                    para5.appendChild(high5);
-                }
-                else {
-                    para5.appendChild(low5);
-                }
-                const element5 = document.getElementsByClassName('summarystat')[5];
-                element5.appendChild(para5);
-                break;
-            default:
-                break;
+    $(".summarystat").each(function(index) { 
+        if (index == 0) {
+            if(blankchar.str >= 10) {
+                $(".summarystat")[0].append("You have a high strength score! You're modifier is gonna be fine.");
+            }
+            else {
+                $(".summarystat")[0].append("You have a low strength score...you're modifier is gonna be pretty scrawny.");
+            }
         }
-    }
+        if (index == 1) {
+            if(blankchar.dex >= 10) {
+                $(".summarystat")[1].append("You have a high dexterity score! You're modifier is gonna be fine.");
+            }
+            else {
+                $(".summarystat")[1].append("You have a low dexterity score...you're modifier is clumsy...yikes.");
+            }
+        }
+        if (index == 2) {
+            if(blankchar.con >= 10) {
+                $(".summarystat")[2].append("You have a high constitution score! You're modifier is gonna be fine.");
+            }
+            else {
+                $(".summarystat")[2].append("You have a low constitution score...you're modifier is gonna need a doctor.");
+            }
+        }
+        if (index == 3) {
+            if(blankchar.int >= 10) {
+                $(".summarystat")[3].append("You have a high intelligence score! You're modifier is gonna be fine.");
+            }
+            else {
+                $(".summarystat")[3].append("You have a low intelligence score...you're modifier is not the brightest...");
+            }
+        }
+        if (index == 4) {
+            if(blankchar.wis >= 10) {
+                $(".summarystat")[4].append("You have a high wisdom score! You're modifier is gonna be fine.");
+            }
+            else {
+                $(".summarystat")[4].append("You have a low wisdom score...you're modifier is uh...yeah.");
+            }
+        }
+        if (index == 5) {
+            if(blankchar.cha >= 10) {
+                $(".summarystat")[5].append("You have a high charisma score! You're modifier is gonna be fine.");
+            }
+            else {
+                $(".summarystat")[5].append("You have a low charisma score...you ever considered of plastic surgery?");
+            }
+        }
+    });
 }
 
 // Event Handler
