@@ -65,6 +65,16 @@ function writeScore(ability) {
     }
 }
 
+function generateSummary1() {
+    $(".summarystat").each(function() { 
+        if ($( this ).is( "#stop" ) ) {
+            $( "span" ).text( "Stopped at div index #" + index );
+            return false;
+          }
+    });
+}
+
+
 // Modify HTML using DOM to generate p tag text.
 function generateSummary() {
     for (let index = 0; index < item.length; index++) {
@@ -167,5 +177,6 @@ function generateSummary() {
 }
 
 // Event Handler
-var sumUp = document.getElementById('gen');
-sumUp.addEventListener('click', generateSummary, false);
+$("#gen").on('click', function() {
+    generateSummary();    
+});
