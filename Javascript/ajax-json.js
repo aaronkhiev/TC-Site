@@ -4,22 +4,20 @@ function makeRequestJ(index) {
     xhr.onload = function() {
         if (xhr.status === 200) {
             responseObject = JSON.parse(xhr.responseText);
-            console.log(responseObject);
-            console.log(responseObject[0].content);
             var newContent = '';
             
-            for (var i = 0; i < responseObject.content.length; i++) {
+            for (var i = 0; i < responseObject.npc.length; i++) {
                 if (index == 0) {
-                    newContent += '<h3>' + responseObject[0].name + '<h3>';
-                    newContent += '<p>' + responseObject[0].description + '<p>'
+                    newContent += '<h3>' + responseObject.npc[0].name + '<h3>';
+                    newContent += '<p>' + responseObject.npc[0].description + '<p>'
                 }
                 if (index == 1) {
-                    newContent += '<h3>' + responseObject.content[1].name + '<h3>';
-                    newContent += '<p>' + responseObject.content[1].description + '<p>'
+                    newContent += '<h3>' + responseObject.npc[1].name + '<h3>';
+                    newContent += '<p>' + responseObject.npc[1].description + '<p>'
                 }
                 if (index == 2) {
-                    newContent += '<h3>' + responseObject.content[2].name + '<h3>';
-                    newContent += '<p>' + responseObject.content[2].description + '<p>'
+                    newContent += '<h3>' + responseObject.npc[2].name + '<h3>';
+                    newContent += '<p>' + responseObject.npc[2].description + '<p>'
                 }
             }
             document.getElementById('ndetails').innerHTML = newContent;
