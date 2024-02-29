@@ -5,12 +5,13 @@ function makeRequestJ(index) {
         if (xhr.status === 200) {
             responseObject = JSON.parse(xhr.responseText);
             console.log(responseObject);
+            console.log(responseObject[0]);
             var newContent = '';
             
             for (var i = 0; i < responseObject.content.length; i++) {
                 if (index == 0) {
-                    newContent += '<h3>' + responseObject.content[0].name + '<h3>';
-                    newContent += '<p>' + responseObject.content[0].description + '<p>'
+                    newContent += '<h3>' + responseObject[0].name + '<h3>';
+                    newContent += '<p>' + responseObject[0].description + '<p>'
                 }
                 if (index == 1) {
                     newContent += '<h3>' + responseObject.content[1].name + '<h3>';
