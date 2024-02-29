@@ -38,7 +38,6 @@ document.getElementById("thistle").addEventListener("click", function() {
     makeRequest1();
     changeOp();
     document.getElementById("thistle").style.opacity = 1;
-    deselect
 });
 
 document.getElementById("verdan").addEventListener("click", function() {
