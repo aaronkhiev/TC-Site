@@ -5,7 +5,7 @@ function makeRequestJ(index) {
         if (xhr.status === 200) {
             responseObject = JSON.parse(xhr.responseText);
             console.log(responseObject);
-            console.log(responseObject[0]);
+            console.log(responseObject[0].content);
             var newContent = '';
             
             for (var i = 0; i < responseObject.content.length; i++) {
