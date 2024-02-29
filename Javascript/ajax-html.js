@@ -1,4 +1,4 @@
-function makeRequest1() {
+function makeRequest(path) {
     var xhr = new XMLHttpRequest();
     
     xhr.onload = function() {
@@ -7,21 +7,7 @@ function makeRequest1() {
         }
     };
     
-    xhr.open('GET', '../../Data/this-data.html', true);
-    
-    xhr.send(null);
-}
-
-function makeRequest2() {
-    var xhr = new XMLHttpRequest();
-    
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            document.getElementById('details').innerHTML = xhr.responseText;
-        }
-    };
-    
-    xhr.open('GET', '../../Data/ver-data.html', true);
+    xhr.open('GET', path, true);
     
     xhr.send(null);
 }
@@ -35,13 +21,13 @@ function changeOp () {
 }
 
 document.getElementById("thistle").addEventListener("click", function() {
-    makeRequest1();
+    makeRequest('../../Data/this-data.html');
     changeOp();
     document.getElementById("thistle").style.opacity = 1;
 });
 
 document.getElementById("verdan").addEventListener("click", function() {
-    makeRequest2();
+    makeRequest('../../Data/ver-data.html');
     changeOp();
     document.getElementById("verdan").style.opacity = 1;
 });
