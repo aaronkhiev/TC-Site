@@ -1,3 +1,6 @@
+
+// Taking after the lab, I will be using something similar to describe the content on the page through the request function.
+// This code uses the standard format for making a request on an event.
 function makeRequest(path) {
     var xhr = new XMLHttpRequest();
     
@@ -12,6 +15,7 @@ function makeRequest(path) {
     xhr.send(null);
 }
 
+// Simply changes opacity of the image. Since I can't find a specific use for AJAX since this is an info/wiki based blog, I'll be keeping it simple.
 function changeOp () {
     var thistle = document.getElementById('thistle');
     var verdan = document.getElementById('verdan');
@@ -20,6 +24,7 @@ function changeOp () {
     verdan.style.opacity = '0.5';
 }
 
+// On each event trigger when clicking the image, the path is sent to the function and run.
 document.getElementById("thistle").addEventListener("click", function() {
     makeRequest('../../Data/this-data.html');
     changeOp();
