@@ -7,7 +7,7 @@ function makeRequest1() {
         }
     };
     
-    xhr.open('GET', '../Data/this-data.html', true);
+    xhr.open('GET', 'Data/this-data.html', true);
     
     xhr.send(null);
 }
@@ -21,7 +21,7 @@ function makeRequest2() {
         }
     };
     
-    xhr.open('GET', '../Data/ver-data.html', true);
+    xhr.open('GET', 'Data/ver-data.html', true);
     
     xhr.send(null);
 }
