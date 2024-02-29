@@ -10,14 +10,17 @@ function makeRequestJ(index) {
                 if (index == 0) {
                     newContent += '<h3>' + responseObject.npc[0].name + '<h3>';
                     newContent += '<p>' + responseObject.npc[0].description + '<p>'
+                    break;
                 }
                 if (index == 1) {
                     newContent += '<h3>' + responseObject.npc[1].name + '<h3>';
                     newContent += '<p>' + responseObject.npc[1].description + '<p>'
+                    break;
                 }
                 if (index == 2) {
                     newContent += '<h3>' + responseObject.npc[2].name + '<h3>';
                     newContent += '<p>' + responseObject.npc[2].description + '<p>'
+                    break;
                 }
             }
             document.getElementById('ndetails').innerHTML = newContent;
