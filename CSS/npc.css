@@ -1,0 +1,22 @@
+.npc-layout, .npc {
+    text-align: center;
+}
+
+#nora {
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+#finn {
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+#tenti {
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+.center {
+    text-align: center;
+}
