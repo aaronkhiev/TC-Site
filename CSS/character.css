@@ -1,0 +1,17 @@
+.char-layout, .char {
+    text-align: center;
+}
+
+#thistle {
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+#verdan {
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+.center {
+    text-align: center;
+}

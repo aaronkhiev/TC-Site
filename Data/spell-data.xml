@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8">
+<root>
+   <spell>
+       <name>Eldritch Blast</name>
+       <vsm></vsm>
+       <dice>d4</dice>
+       <desc></desc>
+   </spell>
+   <spell>
+       <name>Fireball</name>
+       <vsm></vsm>
+       <dice>d4</dice>
+       <desc></desc>
+   </spell>
+   <spell>
+       <name>Prestidigitation</name>
+       <vsm></vsm>
+       <dice>d4</dice>
+       <desc></desc>
+   </spell>
+   <spell>
+       <name>Healing Word</name>
+       <vsm></vsm>
+       <dice>d4</dice>
+       <desc></desc>
+   </spell>
+</root>

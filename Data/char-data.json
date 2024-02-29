@@ -1,0 +1,7 @@
+{
+    "npc": [
+        {"name": "Finn", "description": "The local herbalist in charge of a shop within the City of Waves"},
+        {"name": "Kalitir", "description": "The last surviving member of the Manifestors who seems to have nefarious plans..."},
+        {"name": "Spring", "description": "The forest spirit with a penchant for mischief and pranks."}
+    ]
+}
