@@ -4,10 +4,10 @@ function makeRequestJ(index) {
     xhr.onload = function() {
         if (xhr.status === 200) {
             responseObject = JSON.parse(xhr.responseText);
-            
+            console.log(responseObject);
             var newContent = '';
             
-            for (var i = 0; i < 3; i++) {
+            for (var i = 0; i < responseObject.content.length; i++) {
                 if (index == 0) {
                     newContent += '<h3>' + responseObject.content[0].name + '<h3>';
                     newContent += '<p>' + responseObject.content[0].description + '<p>'
