@@ -17,7 +17,7 @@ function changeOpX() {
     xhr.onload = function() {
         if (xhr.status === 200) {
             var xml = xhr.responseXML;
-            var spells = xml.getElementsByTagName('spell');
+            var spells = xml.getElementsByTagName('name');
             var selectedSpell = spells[index];
  
             var name = selectedSpell.getElementsByTagName('name')[0].textContent;
