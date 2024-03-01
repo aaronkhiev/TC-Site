@@ -1,0 +1,13 @@
+#spellComp {
+    background-color: #834f27dd;
+    padding: 10px 24px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Add a background color on hover */
+#spellComp:hover {
+    background-color: #bc1616;
+}

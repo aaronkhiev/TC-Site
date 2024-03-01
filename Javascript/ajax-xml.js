@@ -29,8 +29,8 @@ function changeOpX() {
             var spellDetails = document.createElement('div');
             spellDetails.innerHTML = `
                 <h2>${name}</h2>
-                <p><strong>Sold:</strong> ${vsm}</p>
-                <p><strong>Sold:</strong> ${dice}</p>
+                <p><strong>VSM & Components:</strong> ${vsm}</p>
+                <p><strong>Dice Rolled:</strong> ${dice}</p>
                 <p><strong>Description:</strong> ${description}</p>
             `;
 
