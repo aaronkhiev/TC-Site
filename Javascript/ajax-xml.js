@@ -15,9 +15,9 @@ function changeOpX() {
 
     xhr.onload = function() {
         if (xhr.status === 200) {
-            var response = xhr.responseXML;
-            console.log(response);
-            var spells = response.getElementsByTagName('content');
+            var xml = xhr.responseXML;
+            console.log(xml);
+            var spells = xml.getElementsByTagName('spell');
             var selectedSpell = spells[index];
  
             var name = selectedSpell.getElementsByTagName('name')[0].textContent;
@@ -37,7 +37,7 @@ function changeOpX() {
         }
     };
  
-    xhr.open('GET', '../../Data/spell-data.xml', true);
+    xhr.open('GET', '../../Data/spells.xml', true);
     xhr.send();
  }
   
