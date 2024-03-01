@@ -16,17 +16,16 @@ function changeOpX() {
  
     xhr.onload = function() {
         if (xhr.status === 200) {
-            const xml = xhr.responseXML;
-            console.log(getElementsByTagName('spell'));
-            const spells = xml.getElementsByTagName('spell');
-            const selectedSpell = spells[index];
+            var xml = xhr.responseXML;
+            var spells = xml.getElementsByTagName('spell');
+            var selectedSpell = spells[index];
  
-            const name = selectedSpell.getElementsByTagName('name')[0].textContent;
-            const vsm = selectedSpell.getElementsByTagName('vsm')[0].textContent;
-            const dice = selectedSpell.getElementsByTagName('dice')[0].textContent;
-            const description = selectedSpell.getElementsByTagName('desc')[0].textContent;
+            var name = selectedSpell.getElementsByTagName('name')[0].textContent;
+            var vsm = selectedSpell.getElementsByTagName('vsm')[0].textContent;
+            var dice = selectedSpell.getElementsByTagName('dice')[0].textContent;
+            var description = selectedSpell.getElementsByTagName('desc')[0].textContent;
 
-            const spellDetails = document.createElement('div');
+            var spellDetails = document.createElement('div');
             spellDetails.innerHTML = `
                 <h2>${name}</h2>
                 <p><strong>Sold:</strong> ${vsm}</p>
