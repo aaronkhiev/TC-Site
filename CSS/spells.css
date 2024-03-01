@@ -1,0 +1,22 @@
+.spell-layout, .spell {
+    text-align: center;
+}
+
+#fire {
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+#invul {
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+#heal {
+    border-radius: 25px;
+    opacity: 0.5;
+}
+
+.center {
+    text-align: center;
+}

@@ -41,6 +41,7 @@ function changeOpJ() {
     finn.style.opacity = '0.5';
     tenti.style.opacity = '0.5';
 }
+
 document.getElementById("nora").addEventListener("click", function() {
     makeRequestJ(0);
     changeOpJ();

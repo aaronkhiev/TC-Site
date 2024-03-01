@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../CSS/myStyle.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/navigation.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/spells.css">
 </head>
 
 <body>
@@ -28,17 +29,41 @@
             <a class="active" href="index.html">The Dungeon Delver's Guide</a>
             <a href="../Generators-Page/index.html">Generators</a>
             <a href="index.html">Game Master's World Anvil</a>
-            <a href="https://www.dndbeyond.com/">About</a>
+            <a href="../about.html">About</a>
         </div>
         <hr />
 
-        <h2>Overview</h2>
+        <h2>Magic and Monsters</h2>
             <p>
-                 
+                 It isn't high fantasy without magic! In the world of Dungeons and Dragons, you have the ability to wield the weaves of magic
+                 to do your bidding with heavy restrictions of course. You can spellcast as long as you have the proper prerequisites such as
+                 the proper class, feats, racial traits, or inherit abilities. For instance 
             </p>
-        <hr />
+        
+        <section id="divide">
+            <div id="container">
+                <h2 class="center">NPC Examples</h2>  
+                <div class="spell-layout">
+                    <div id="spell">
+                        <img id="fire" src="../../Images/FIreball.png" alt="Dr. Rosenbridge" width="100" height="100"/>
+                        <img id="invul" src="../../Images/Shield.png" alt="Finn The Elder" width="100" height="100"/>
+                        <img id="heal" src="../../Images/Heal.png" alt="Tenti The Jelly" width="100" height="100"/>
+                    </div>
+                </div>
+                <div class="spell-layout">
+                    <div id="sdetails">
+                        <p>Learn about these 4 spells by clicking on their icons~!</p>
+                    </div>
 
-
+                    <div id="compo">
+                        <p>Need more information on spell components? Click the button~!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <hr />          
         <h2>Learn More Here</h2>
         <div class="subnav">
             <a href="skills.html"> Skills, Skill Checks, and Success</a>
@@ -58,6 +83,7 @@
             </address>
         </div>
     </div>
+    <script src="../../Javascript/ajax-xml.js"></script>
 </body>
 
 </html>
