@@ -1,21 +1,25 @@
-<?xml version="1.0" encoding="utf-8">
+<?xml version="1.0" encoding="utf-8" ?>
 <root>
-   <book>
-       <title>Don Quixote</title>
-       <author>Miguel de Cervantes</author>
-       <sold>500</sold>
-       <description>Don Quixote is a classic novel from 1605 which portraits the life and insightful journey of Don Quixote de la Mancha, a Spanish man who seems to be losing his mind on his quest to become a knight and restore chivalry alongside with a farmer named Sancho Panza, with whom he fights multiple imaginary enemies and faces a series of fantastic challenges.</description>
-   </book>
-   <book>
-       <title>A Tale of Two Cities</title>
-       <author>Charles Dickens</author>
-       <sold>200</sold>
-       <description>The novel tells the story of the French Doctor Manette, his 18-year-long imprisonment in the Bastille in Paris, and his release to live in London with his daughter Lucie whom he had never met. The story is set against the conditions that led up to the French Revolution and the Reign of Terror.</description>
-   </book>
-   <book>
-       <title>The Lord of the Rings</title>
-       <author>J.R.R. Tolkien</author>
-       <sold>150</sold>
-       <description>The Lord of the Rings is the saga of a group of sometimes reluctant heroes who set forth to save their world from consummate evil. Its many worlds and creatures were drawn from Tolkien's extensive knowledge of philology and folklore.</description>
-   </book>
-</root>
+    <content>
+        <name>Fireball</name>
+        <vsm>V S M (A tiny ball of bat guano and sulfur)</vsm>
+        <dice>8d6</dice>
+        <desc>A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. 
+            Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one. 
+            The fire spreads around corners. It ignites flammable objects in the area that aren’t being worn or carried.</desc>
+    </content>
+    <content>
+        <name>Invulnerability</name>
+        <vsm>V S M (a small piece of adamantine worth at least 500 gp, which the spell consumes)</vsm>
+        <dice>None~!</dice>
+        <desc>You are immune to all damage until the spell ends.</desc>
+    </content>
+    <content>
+        <name>Healing Word</name>
+        <vsm>V</vsm>
+        <dice>1d4</dice>
+        <desc>A creature of your choice that you can see within range regains hit points equal to 1d4 + 
+            your spellcasting ability modifier. This spell has no effect on undead or constructs.
+            At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, 
+            the healing increases by 1d4 for each slot level above 1st.</desc>
+    </content>
