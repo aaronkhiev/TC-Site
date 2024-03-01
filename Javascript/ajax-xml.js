@@ -17,6 +17,7 @@ function changeOpX() {
     xhr.onload = function() {
         if (xhr.status === 200) {
             const xml = xhr.responseXML;
+            console.log(getElementsByTagName('spell'));
             const spells = xml.getElementsByTagName('spell');
             const selectedSpell = spells[index];
  
@@ -24,8 +25,7 @@ function changeOpX() {
             const vsm = selectedSpell.getElementsByTagName('vsm')[0].textContent;
             const dice = selectedSpell.getElementsByTagName('dice')[0].textContent;
             const description = selectedSpell.getElementsByTagName('desc')[0].textContent;
- 
- 
+
             const spellDetails = document.createElement('div');
             spellDetails.innerHTML = `
                 <h2>${name}</h2>
