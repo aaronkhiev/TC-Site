@@ -17,8 +17,8 @@ function changeOpX() {
         if (xhr.status === 200) {
             var xml = xhr.responseXML;
             console.log(xml);
-            var spells = xml.getElementsByTagName('spell');
-            var selectedSpell = spells[index];
+            var books = xml.getElementsByTagName('book');
+            var selectedSpell = books[index];
  
             var name = selectedSpell.getElementsByTagName('name')[0].textContent;
             var vsm = selectedSpell.getElementsByTagName('vsm')[0].textContent;
