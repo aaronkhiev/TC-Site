@@ -10,14 +10,12 @@ function changeOpX() {
  
  function loadXMLData(index) {
     var xhr = new XMLHttpRequest();
-    console.log(xhr);
     var detailsDiv = document.getElementById('sdetails');
     detailsDiv.innerHTML = '';
 
     xhr.onload = function() {
         if (xhr.status === 200) {
             var xml = xhr.responseXML;
-            console.log(xml);
             var spells = xml.getElementsByTagName('content');
             var selectedSpell = spells[index];
  
