@@ -12,13 +12,12 @@ function changeOpX() {
     var xhr = new XMLHttpRequest();
     var detailsDiv = document.getElementById('sdetails');
     detailsDiv.innerHTML = '';
- 
- 
+
     xhr.onload = function() {
         if (xhr.status === 200) {
             var xml = xhr.responseXML;
             console.log(xml);
-            var spells = xml.getElementsByTagName('spell');
+            var spells = xml.getElementsByTagName('content');
             var selectedSpell = spells[index];
  
             var name = selectedSpell.getElementsByTagName('name')[0].textContent;
