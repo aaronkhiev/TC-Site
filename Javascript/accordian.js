@@ -1,0 +1,3 @@
+$( function() {
+    $( "#accord" ).accordion();
+});
