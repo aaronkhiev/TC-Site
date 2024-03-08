@@ -48,3 +48,53 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: block;
 }
+
+#Contact a {
+    background-color: #4032a6dd;
+    padding: 5px 10px;
+    border-radius: 25px;
+    color: white;
+}
+
+.subnav a {
+    background-color: #4032a6dd;
+    padding: 5px 10px;
+    border-radius: 25px;
+    color: white;
+    display: inline-block;
+}
+
+.chapt a {
+    background-color: #ac7245dd;
+    padding: 10px 24px;
+    border-radius: 25px;
+    color: rgb(78, 54, 255);
+}
+
+#dm {
+    background-color: #ac7245dd;
+    padding: 10px 24px;
+    border-radius: 25px;
+    color: rgb(78, 54, 255);
+    display: inline-block;
+}
+
+#comp {
+    background-color: #ac7245dd;
+    padding: 10px 24px;
+    border-radius: 25px;
+    color: rgb(78, 54, 255);
+    display: inline-block;
+}
+
+#res {
+    background-color: #ac7245dd;
+    padding: 10px 24px;
+    border-radius: 25px;
+    color: rgb(78, 54, 255);
+    display: inline-block;
+}
+
+#cen {
+    text-align: center;
+}

@@ -1,3 +1,3 @@
 $( function() {
-    $( "#accord" ).accordion();
+    $( "#accord" ).accordion({heightStyle: "content", collapsible: "true"});
 });
