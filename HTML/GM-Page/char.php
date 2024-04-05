@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../CSS/navigation.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/character.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/npc.css">
+    <?php include '../../character.php'; ?>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
             <a href="../index.html">Home</a>
             <a href="../DD-Page/index.html">The Dungeon Delver's Guide</a>
             <a href="../Generators-Page/index.html">Generators</a>
-            <a class="active" href="character.html">Game Master's World Anvil</a>
+            <a class="active" href="char.php">Game Master's World Anvil</a>
             <a href="../about.html">About</a>
         </div>
         <hr />
@@ -73,6 +74,52 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section>
+            <h2 class="center">Basic Character Profiles</h2>
+            <p>
+                After looking at the profiles above, let's break some characters to the barest features and look at it with only ability scores!
+            </p>
+            <h2><?= $thistle->name ?></h2>
+            <ul>
+                <li>Strength:<?= ' ', $thistle->strength ?></li>
+                <li>Dexterity:<?= ' ', $thistle->dexterity ?></li>
+                <li>Constitution:<?= ' ', $thistle->constitution ?></li>
+                <li>Intelligence:<?= ' ', $thistle->intelligence ?></li>
+                <li>Wisdom:<?= ' ', $thistle->wisdom ?></li>
+                <li>Charisma:<?= ' ', $thistle->charisma ?></li>
+            </ul>
+
+            <form action="" method="post">
+                <strong>Character Name:</strong> <input type="text" name="textVal"/>
+                <input type="submit" name='submit' value='Submit'/>
+            </form>
+
+            <p>
+                Having trouble doing the math? This page will instantly generate scores for you~!
+                Just enter a name and hit submit. Your character name will appear above the scores
+                past the name box. If you're unsatisfied with your scores, just refresh the page for
+                a new set. You're character name will stay on the page.
+            </p>
+
+            <h2>
+                <?php 
+                    if (isset($_POST['submit'])) {
+                        $custom->setName($_POST['textVal']);
+                        echo $custom->name;
+                    }
+                ?>
+            </h2>
+            <?= $custom->displayStat() ?>
+            <ul>
+                <li>Strength:<?= ' ', $custom->strength ?></li>
+                <li>Dexterity:<?= ' ', $custom->dexterity ?></li>
+                <li>Constitution:<?= ' ', $custom->constitution ?></li>
+                <li>Intelligence:<?= ' ', $custom->intelligence ?></li>
+                <li>Wisdom:<?= ' ', $custom->wisdom ?></li>
+                <li>Charisma:<?= ' ', $custom->charisma ?></li>
+            </ul>
         </section>
 
         <hr />
