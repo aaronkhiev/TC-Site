@@ -260,6 +260,7 @@
             </address>
         </div>
     </div>
+    <?php session_write_close(); ?>
     <script src="../../Javascript/ajax-html.js"></script>
     <script src="../../Javascript/ajax-json.js"></script>
 </body>
