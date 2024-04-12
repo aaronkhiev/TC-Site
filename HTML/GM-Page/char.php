@@ -181,7 +181,7 @@
                 } else {
                     $message = 'Character Created!';
                 }
-                $_SESSION['charn'] = $user['name'];
+                $_SESSION['charn'] = $_POST['name'];
             }
             ?>
             
