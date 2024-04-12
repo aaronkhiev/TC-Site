@@ -21,8 +21,10 @@
     if( isset( $_SESSION['counter'] ) ) { 
         $_SESSION['counter'] += 1; 
     }
-    else { 
-        $_SESSION['counter'] = 1; 
+    else {
+        $counter = $_SESSION['counter'] + 1;
+        unset($_SESSION['counter']);
+        $_SESSION['counter'] = $counter; 
     } 
 
     $my_Msg = "This page was visited ". $_SESSION['counter']; 
@@ -44,7 +46,6 @@
         session_destroy();
         $my_Msg = "Clearing character data...";
     }
-    session_unset();
 ?>
 
 <html lang="en">
