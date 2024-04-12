@@ -25,16 +25,12 @@
         $_SESSION['counter'] = 1; 
     } 
 
-    $my_Msg = "This page was visited ". $_SESSION['counter']; 
-    $my_Msg .= " Character data will be cleared after 5 uses so please backup your scores!";
+    $my_Msg = " Character data will be cleared after 5 uses so please backup your scores!";
 
     //If there has yet to be a character name set then create set a session variable with a blank name.
     if( isset($_SESSION['charn'] ) == false ) { 
         $_SESSION['charn'] = '';
     }
-
-    //Print out a customized greeting based on last character.
-    $chargreet = "Your previous character: " . $_SESSION['charn'];
 
     //Automatically terminate the session after the page is accessed 5 times.
     if ($_SESSION['counter'] == 5) {
@@ -188,8 +184,6 @@
             <p><?= $my_Msg ?></p>
 
             <?= $message ?>
-
-            <p><?= $chargreet ?></p>
             
             <form action="char.php" method="POST">
             <strong>Name:</strong> <input type='text' name='name' value='<?= htmlspecialchars($user['name']) ?>'>
