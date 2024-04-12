@@ -27,7 +27,7 @@
 
     //If there has yet to be a character name set then create set a session variable with a blank name.
     if( isset($_SESSION['charn'] ) == false ) { 
-        $_SESSION['charn'] = '';
+        $charn = $SESSION['charn'] ?? '';
     }
 
     //Print out a customized greeting based on last character.
@@ -179,7 +179,8 @@
                 } else {
                     $message = 'Character Created!';
                 }
-                $_SESSION['charn'] = $user['name'];
+                $charn = $user['name'];
+                $_SESSION['charn'] = $charn;
             }
             ?>
             
