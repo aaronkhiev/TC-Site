@@ -21,10 +21,8 @@
     if( isset( $_SESSION['counter'] ) ) { 
         $_SESSION['counter'] += 1; 
     }
-    else {
-        $counter = $_SESSION['counter'] + 1;
-        unset($_SESSION['counter']);
-        $_SESSION['counter'] = $counter; 
+    else { 
+        $_SESSION['counter'] = 1; 
     } 
 
     $my_Msg = "This page was visited ". $_SESSION['counter']; 
@@ -183,7 +181,7 @@
                 } else {
                     $message = 'Character Created!';
                 }
-                $_SESSION['charn'] = $_POST['name'];
+                $_SESSION['charn'] = $user['name'];
             }
             ?>
             
@@ -206,8 +204,7 @@
             <p><strong>Name: </strong><?= $user['name'] ?></p>
             <p><strong>Title: </strong><?= $user['title'] ?></p>
             <p><strong>Dice: </strong><?= $user['dice'] ?></p>
-            <?= print_r($_SESSION) ?>
-            <p><?= print_r($_COOKIE['visitor']) ?></p>
+
         <section>
             <?= $custom->displayStat() ?>
             <ul>
