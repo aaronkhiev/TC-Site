@@ -205,7 +205,7 @@
             <p><strong>Title: </strong><?= $user['title'] ?></p>
             <p><strong>Dice: </strong><?= $user['dice'] ?></p>
             <?= print_r($_SESSION) ?>
-            <?= print_r($_COOKIE) ?>
+            <p><?= print_r($_COOKIE['visitor']) ?></p>
         <section>
             <?= $custom->displayStat() ?>
             <ul>
