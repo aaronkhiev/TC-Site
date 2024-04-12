@@ -44,7 +44,7 @@
         session_destroy();
         $my_Msg = "Clearing character data...";
     }
-    session_write_close();
+    session_unset();
 ?>
 
 <html lang="en">
