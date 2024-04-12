@@ -25,6 +25,7 @@
         $counter = $counter + 1;
     }
 
+    $my_Msg = "This page was visited ". $_SESSION['counter']; 
     $my_Msg .= "Character data will be cleared after 5 uses so please backup your scores!";
 
     //If there has yet to be a character name set then create set a session variable with a blank name.
