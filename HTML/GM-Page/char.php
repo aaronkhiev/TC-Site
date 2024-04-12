@@ -1,5 +1,50 @@
 <!DOCTYPE html>
 
+<?php
+    // Greetings based on whether this page was visited or not. Cookies set to expire in 1 hour.
+    $visitor = $_COOKIE['visitor'] ?? 0;
+    $visitor = $visitor + 1;
+
+    setcookie('visitor', htmlspecialchars($visitor), time() + (60 * 60), "/");
+
+    if ($visitor == 1) {
+        $greeting = 'Welcome New Adventurer! Feel free to look around.';
+    }
+    else {
+        $greeting = 'Welcome Back Adventurer!';
+    }
+?>
+
+<?php 
+    //Creating a session and storing the previous character's name.
+    session_start(); 
+    if( isset( $_SESSION['counter'] ) ) { 
+        $_SESSION['counter'] += 1; 
+    }
+    else { 
+        $_SESSION['counter'] = 1; 
+    } 
+
+    $my_Msg = "This page is visited ". $_SESSION['counter']; 
+    $my_Msg .= " time during this session.";
+
+    //If there has yet to be a character name set then create set a session variable with a blank name.
+    if( isset($_SESSION['charn'] ) == false ) { 
+        $_SESSION['charn'] = '';
+    }
+
+
+    //Print out a customized greeting based on last character.
+    $chargreet = '';
+    $chargreet = "Your previous character: " . $_SESSION['charn'];
+
+    //Automaticall terminate the session after the page is accessed 5 times.
+    if ($_SESSION['counter'] == 5) {
+        session_destroy();
+        $my_Msg = "Clearing sessions...";
+    }
+?>
+
 <html lang="en">
 
 <head>
@@ -91,26 +136,74 @@
                 <li>Charisma:<?= ' ', $thistle->charisma ?></li>
             </ul>
 
-            <form action="" method="post">
-                <strong>Character Name:</strong> <input type="text" name="textVal"/>
-                <input type="submit" name='submit' value='Submit'/>
-            </form>
-
             <p>
                 Having trouble doing the math? This page will instantly generate scores for you~!
                 Just enter a name and hit submit. Your character name will appear above the scores
                 past the name box. If you're unsatisfied with your scores, just refresh the page for
                 a new set. You're character name will stay on the page.
             </p>
+        </section>
 
-            <h2>
-                <?php 
-                    if (isset($_POST['submit'])) {
-                        $custom->setName($_POST['textVal']);
-                        echo $custom->name;
-                    }
-                ?>
-            </h2>
+        <h2><?= $greeting ?></h2>
+
+        <?php 
+            // Code that will set values for the character name, character title, and favored dice type/modifier for that character.
+            require '../../validate.php';
+
+            $user = [
+                'name' => '',
+                'title' => '',
+                'dice' => '',
+            ];
+
+            $errors = [
+                'name' => '',
+                'title' => '',
+                'dice' => '',
+            ];
+
+            $message = '';
+
+            // Validation that uses functions from the lecture slides and example
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $user['name'] = $_POST['name'];
+                $user['title'] = $_POST['title'];
+                $user['dice'] = $_POST['dice'];
+
+                $errors['name'] = is_text($user['name'], 2, 20) ? '' : 'Must be 2-20 characters';
+                $errors['title'] = is_text($user['title'], 2, 20) ? '' : 'Must be 2-20 characters';
+                $errors['dice'] = is_number($user['dice'], 1, 20) ? '' : 'Must be 1-20 characters';
+                
+                $invalid = implode($errors);
+                if ($invalid) {
+                    $message = 'Please correct the following errors:';
+                } else {
+                    $message = 'Character Created!';
+                }
+                $_SESSION['charn'] = $user['name'];
+            }
+            ?>
+            
+            <?= $message ?>
+
+            <p><?= $my_Msg ?></p>
+            <p><?= $chargreet ?></p>
+            
+            <form action="char.php" method="POST">
+            <strong>Name:</strong> <input type='text' name='name' value='<?= htmlspecialchars($user['name']) ?>'>
+                    <span class='error'><?= $errors['name'] ?></span><br>
+            <strong>Title:</strong> <input type='text' name='title' value='<?= htmlspecialchars($user['title']) ?>'>
+                    <span class='error'><?= $errors['title'] ?></span><br>
+            <strong>Random Number/Modifier (1-20):</strong> <input type='text' name='dice' value='<?= htmlspecialchars($user['dice']) ?>'>
+                <span class='error'><?= $errors['dice'] ?></span><br>
+                    <input type='submit' value='Save'>
+            </form>
+
+            <p><strong>Name: </strong><?= $user['name'] ?></p>
+            <p><strong>Title: </strong><?= $user['title'] ?></p>
+            <p><strong>Dice: </strong><?= $user['dice'] ?></p>
+
+        <section>
             <?= $custom->displayStat() ?>
             <ul>
                 <li>Strength:<?= ' ', $custom->strength ?></li>
