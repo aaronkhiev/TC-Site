@@ -204,7 +204,7 @@
             <p><strong>Name: </strong><?= $user['name'] ?></p>
             <p><strong>Title: </strong><?= $user['title'] ?></p>
             <p><strong>Dice: </strong><?= $user['dice'] ?></p>
-
+            <?= print_r($_SESSION) ?>
         <section>
             <?= $custom->displayStat() ?>
             <ul>
