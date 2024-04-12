@@ -18,12 +18,9 @@
 <?php 
     //Creating a session and storing the previous character's name.
     session_start(); 
-    if( isset( $_SESSION['counter'] ) ) { 
-        $_SESSION['counter'] += 1; 
-    }
-    else { 
-        $_SESSION['counter'] = 1; 
-    } 
+    $counter = $_SESSION['counter'] ?? 0;
+    $counter = $counter + 1;
+    $_SESSION['counter'] = $counter;
 
     $my_Msg = "This page was visited ". $_SESSION['counter']; 
     $my_Msg .= " times. Character data will be cleared after 5 uses so please backup your scores!";
@@ -186,9 +183,10 @@
             }
             ?>
             
+            <p><?= $my_Msg ?></p>
+
             <?= $message ?>
 
-            <p><?= $my_Msg ?></p>
             <p><?= $chargreet ?></p>
             
             <form action="char.php" method="POST">
