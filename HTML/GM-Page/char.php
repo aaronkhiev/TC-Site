@@ -18,15 +18,15 @@
 <?php 
     //Creating a session and storing the previous character's name.
     session_start(); 
-    if ( isset($_SESSION['counter'] ) == false) {
-        $counter = $_SESSION['counter'] ?? 0;
+    if( isset( $_SESSION['counter'] ) ) { 
+        $_SESSION['counter'] += 1; 
     }
-    else {
-        $counter = $counter + 1;
-    }
+    else { 
+        $_SESSION['counter'] = 1; 
+    } 
 
     $my_Msg = "This page was visited ". $_SESSION['counter']; 
-    $my_Msg .= "Character data will be cleared after 5 uses so please backup your scores!";
+    $my_Msg .= " Character data will be cleared after 5 uses so please backup your scores!";
 
     //If there has yet to be a character name set then create set a session variable with a blank name.
     if( isset($_SESSION['charn'] ) == false ) { 
@@ -34,7 +34,6 @@
     }
 
     //Print out a customized greeting based on last character.
-    $chargreet = '';
     $chargreet = "Your previous character: " . $_SESSION['charn'];
 
     //Automatically terminate the session after the page is accessed 5 times.
