@@ -25,14 +25,13 @@
         $_SESSION['counter'] = 1; 
     } 
 
-    $my_Msg = "This page is visited ". $_SESSION['counter']; 
-    $my_Msg .= " time during this session.";
+    $my_Msg = "This page was visited ". $_SESSION['counter']; 
+    $my_Msg .= " times. Character data will be cleared after 5 uses so please backup your scores!";
 
     //If there has yet to be a character name set then create set a session variable with a blank name.
     if( isset($_SESSION['charn'] ) == false ) { 
         $_SESSION['charn'] = '';
     }
-
 
     //Print out a customized greeting based on last character.
     $chargreet = '';
@@ -40,8 +39,11 @@
 
     //Automaticall terminate the session after the page is accessed 5 times.
     if ($_SESSION['counter'] == 5) {
+        $_SESSION = [];
+        $params = session_get_cookie_params();
+        setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
         session_destroy();
-        $my_Msg = "Clearing sessions...";
+        $my_Msg = "Clearing character data...";
     }
 ?>
 
