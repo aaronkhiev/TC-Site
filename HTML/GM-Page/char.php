@@ -12,7 +12,6 @@
 	$chara = pdo($pdo, $sql)->fetchAll();
 ?> 
 
-
 <?php
     // Greetings based on whether this page was visited or not. Cookies set to expire in 1 hour.
     $visitor = $_COOKIE['visitor'] ?? 0;
