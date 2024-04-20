@@ -241,10 +241,57 @@
 					<!-- Create a hyperlink to info.php page with name as parameter -->
 					<a href="info.php?sign=<?= htmlspecialchars($chara[0]['name']) ?>">
 						<!-- Display the name of the character -->
-						<h3><?= $chara[0]['name'] ?></h3>
+						<h3><?= $chara[0]['name'] ?> - <?= $chara[0]['title'] ?></h3>
 					</a>
-					<!-- Display the character's title -->
-					<p><?= $chara[0]['title'] ?></p>
+            </div>
+            <div class="characters">
+					<!-- Create a hyperlink to info.php page with name as parameter -->
+					<a href="info.php?sign=<?= htmlspecialchars($chara[1]['name']) ?>">
+						<!-- Display the name of the character -->
+						<h3><?= $chara[1]['name'] ?> - <?= $chara[1]['title'] ?></h3>
+					</a>
+            </div>
+            <div class="characters">
+					<!-- Create a hyperlink to info.php page with name as parameter -->
+					<a href="info.php?sign=<?= htmlspecialchars($chara[2]['name']) ?>">
+						<!-- Display the name of the character -->
+						<h3><?= $chara[2]['name'] ?> - <?= $chara[2]['title'] ?></h3>
+					</a>
+            </div>
+            <div class="characters">
+					<!-- Create a hyperlink to info.php page with name as parameter -->
+					<a href="info.php?sign=<?= htmlspecialchars($chara[3]['name']) ?>">
+						<!-- Display the name of the character -->
+						<h3><?= $chara[3]['name'] ?> - <?= $chara[3]['title'] ?></h3>
+					</a>
+            </div>
+            <div class="characters">
+					<!-- Create a hyperlink to info.php page with name as parameter -->
+					<a href="info.php?sign=<?= htmlspecialchars($chara[4]['name']) ?>">
+						<!-- Display the name of the character -->
+						<h3><?= $chara[4]['name'] ?> - <?= $chara[4]['title'] ?></h3>
+					</a>
+            </div>
+            <div class="characters">
+					<!-- Create a hyperlink to info.php page with name as parameter -->
+					<a href="info.php?sign=<?= htmlspecialchars($chara[5]['name']) ?>">
+						<!-- Display the name of the character -->
+						<h3><?= $chara[5]['name'] ?> - <?= $chara[5]['title'] ?></h3>
+					</a>
+            </div>
+            <div class="characters">
+					<!-- Create a hyperlink to info.php page with name as parameter -->
+					<a href="info.php?sign=<?= htmlspecialchars($chara[6]['name']) ?>">
+						<!-- Display the name of the character -->
+						<h3><?= $chara[6]['name'] ?> - <?= $chara[6]['title'] ?></h3>
+					</a>
+            </div>
+            <div class="characters">
+					<!-- Create a hyperlink to info.php page with name as parameter -->
+					<a href="info.php?sign=<?= htmlspecialchars($chara[7]['name']) ?>">
+						<!-- Display the name of the character -->
+						<h3><?= $chara[7]['name'] ?> - <?= $chara[7]['title'] ?></h3>
+					</a>
             </div>
 
         <hr />
