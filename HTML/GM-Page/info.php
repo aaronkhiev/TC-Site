@@ -4,12 +4,17 @@
 	// Include the session script
 	require '../../includes/database-connection.php';
 
+    $select = $_GET['charID'];
+
+
 	// Retrieve ALL character info from the characters table. Campaign info will be displayed on another page.
 	$sql = "SELECT * 
-			FROM characters;";
+			FROM characters
+            JOIN campaign ON characters.campID = campaign.campID
+            WHERE character.charID= :charID;";
 
 	// Execute the SQL query using the pdo function and fetch the result
-	$chara = pdo($pdo, $sql)->fetchAll();
+	$chara = pdo($pdo, $sql, ['charID' => $select])->fetch();
 ?> 
 
 <html lang="en">
@@ -44,17 +49,15 @@
         </div>
         <hr />
 
+        <h2>Character Details</h2>
+
+
         <h2>External Resources</h2>
             <p>
                 Do you still feel unprepared? Need DM resources not for players? No worries! Check out this site for more~! <a id="comp" href="https://www.dnd-compendium.com/">The DND Compendium.</a>
             </p>
         <hr />
 
-        <h2>Find Players Near You~!</h2>
-            <p>
-                Need people to play with? Use the geolocation tool to grab your location.
-            </p>
-        <hr />
         <h2>Learn More Here</h2>
         <div class="subnav">
             <a href="skills.html"> Skills, Skill Checks, and Success</a>

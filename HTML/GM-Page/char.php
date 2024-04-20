@@ -245,7 +245,7 @@
             </div>
             <div class="characters">
 					<!-- Create a hyperlink to info.php page with name as parameter -->
-					<a href="info.php">
+					<a href="info.php?charID=<?= htmlspecialchars($chara[1]['charID']) ?>">
 						<!-- Display the name of the character -->
 						<h3><?= $chara[1]['name'] ?> - <?= $chara[1]['title'] ?></h3>
 					</a>
