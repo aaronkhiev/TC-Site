@@ -8,7 +8,7 @@
 	// Retrieve info on the character from the URL query string name
 	$sql = "SELECT *
 			FROM characters
-			WHERE name = :charID";
+			WHERE charID = :charID";
 
 	// Execute the SQL query using the pdo function w/arg for sign and fetch the result
 	$charInfo = pdo($pdo, $sql, ['charID' => $character])->fetch();
