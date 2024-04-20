@@ -1,19 +1,5 @@
 <!DOCTYPE html>
 
-<?php
-	// Include the session script
-	require '../../includes/database-connection.php';
-
-	// Retrieve ALL character info from the characters table. Campaign info will be displayed on another page.
-	$sql = "SELECT * 
-			FROM characters
-            JOIN campaign ON characters.campID = campaign.campID
-            WHERE character.charID= :charID;";
-
-	// Execute the SQL query using the pdo function and fetch the result
-	$chara = pdo($pdo, $sql, ['charID' => $select])->fetch();
-?> 
-
 <html lang="en">
 
 <head>
