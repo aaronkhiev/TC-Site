@@ -3,13 +3,15 @@
 <?php
 	// Include the session script
 	require '../../includes/database-connection.php';
-    
+
+    $select = $_GET['charID'];
+
 	// Retrieve ALL character info from the characters table. Campaign info will be displayed on another page.
 	$sql = "SELECT * 
 			FROM characters;";
 
 	// Execute the SQL query using the pdo function and fetch the result
-	$chara = pdo($pdo, $sql)->fetchAll();
+	// $zodiac = pdo($pdo, $sql, ['charID' => $sign])->fetch();
 ?> 
 
 <html lang="en">
@@ -44,7 +46,7 @@
         </div>
         <hr />
 
-        <h2></h2>
+        <h2>Character Details</h2>
 
 
         <h2>External Resources</h2>
