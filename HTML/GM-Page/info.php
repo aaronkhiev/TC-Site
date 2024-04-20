@@ -8,10 +8,11 @@
 
 	// Retrieve ALL character info from the characters table. Campaign info will be displayed on another page.
 	$sql = "SELECT * 
-			FROM characters;";
+			FROM characters
+            WHERE characters.charID= :charID;";
 
 	// Execute the SQL query using the pdo function and fetch the result
-	// $zodiac = pdo($pdo, $sql, ['charID' => $sign])->fetch();
+	$details = pdo($pdo, $sql, ['charID' => $select])->fetch();
 ?> 
 
 <html lang="en">
@@ -47,6 +48,7 @@
         <hr />
 
         <h2>Character Details</h2>
+        <hr />
 
 
         <h2>External Resources</h2>
