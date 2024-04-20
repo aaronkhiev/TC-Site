@@ -51,14 +51,19 @@
         <h2>Character Details</h2>
         <h3><?= $details['name'] ?> - <?= $details['title'] ?></h3>
             <ul>
-                <ol><strong>Strength: </strong><?= $details['strength'] ?></ol>
-                <ol><strong>Dexterity: </strong><?= $details['dexterity'] ?></ol>
-                <ol><strong>Constitution: </strong><?= $details['constitution'] ?></ol>
-                <ol><strong>Intelligence: </strong><?= $details['intelligence'] ?></ol>
-                <ol><strong>Wisdom: </strong><?= $details['wisdom'] ?></ol>
-                <ol><strong>Charisma: </strong><?= $details['charisma'] ?></ol>
+                <li><strong>Strength: </strong><?= $details['strength'] ?></li>
+                <li><strong>Dexterity: </strong><?= $details['dexterity'] ?></li>
+                <li><strong>Constitution: </strong><?= $details['constitution'] ?></li>
+                <li><strong>Intelligence: </strong><?= $details['intelligence'] ?></li>
+                <li><strong>Wisdom: </strong><?= $details['wisdom'] ?></li>
+                <li><strong>Charisma: </strong><?= $details['charisma'] ?></li>
             </ul>
         <h3>Campaign Involvement</h3>
+        <ul>
+            <li><strong>Campaign Title: </strong><?= $details['campTitle'] ?></li>
+            <li><strong>Theme: </strong><?= $details['theme'] ?></li>
+            <li><strong>Sessions Played: </strong><?= $details['session'] ?></li>
+        </ul>
         <hr />
         
         <h2>External Resources</h2>
