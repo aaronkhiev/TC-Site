@@ -14,8 +14,6 @@
 	$charInfo = pdo($pdo, $sql, ['charID' => $character])->fetch();
 ?> 
 
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Fantasy Table Top Compendium Homepage</title>
@@ -93,5 +91,3 @@
     <script src="../../Javascript/ajax-html.js"></script>
     <script src="../../Javascript/ajax-json.js"></script>
 </body>
-
-</html>
