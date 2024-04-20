@@ -16,7 +16,7 @@
     text-align: center;
 }
 
-a.characters {
+.characters div {
     background-color: #834f27dd;
     border-radius: 25px;
     padding: 10px 24px;

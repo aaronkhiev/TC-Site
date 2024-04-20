@@ -235,7 +235,7 @@
             </p>
 
         <hr />
-        <h2>Checkout our Character Database here!</h2>
+        <h2>Check out our Character Database here!</h2>
             <div class="characters">
 					<!-- Create a hyperlink to info.php page with name as parameter -->
 					<a href="info.php?sign=<?= htmlspecialchars($chara[0]['name']) ?>">
