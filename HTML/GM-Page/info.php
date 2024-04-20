@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <?php
 	// Include the database connection script
 	require 'includes/database-connection.php';
