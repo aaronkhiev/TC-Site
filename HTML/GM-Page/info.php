@@ -9,6 +9,7 @@
 	// Retrieve ALL character info from the characters table. Campaign info will be displayed on another page.
 	$sql = "SELECT * 
 			FROM characters
+            JOIN campaign ON characters.campID = campaign.campID
             WHERE characters.charID= :charID;";
 
 	// Execute the SQL query using the pdo function and fetch the result
@@ -57,6 +58,7 @@
                 <ol><strong>Wisdom: </strong><?= $details['wisdom'] ?></ol>
                 <ol><strong>Charisma: </strong><?= $details['charisma'] ?></ol>
             </ul>
+        <h3>Campaign Involvement</h3>
         <hr />
         
         <h2>External Resources</h2>
