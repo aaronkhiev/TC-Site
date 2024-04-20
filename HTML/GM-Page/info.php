@@ -50,12 +50,12 @@
         <h2>Character Details</h2>
         <h3><?= $details['name'] ?> - <?= $details['title'] ?></h3>
             <ul>
-                <ol>Strength: </ol>
-                <ol>Dexterity: </ol>
-                <ol>Constitution: </ol>
-                <ol>Intelligence: </ol>
-                <ol>Wisdom: </ol>
-                <ol>Charisma: </ol>
+                <ol>Strength: <?= $details['strength'] ?></ol>
+                <ol>Dexterity: <?= $details['dexterity'] ?></ol>
+                <ol>Constitution: <?= $details['constitution'] ?></ol>
+                <ol>Intelligence: <?= $details['intelligence'] ?></ol>
+                <ol>Wisdom: <?= $details['wisdom'] ?></ol>
+                <ol>Charisma: <?= $details['charisma'] ?></ol>
             </ul>
         <hr />
         
