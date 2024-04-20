@@ -48,9 +48,17 @@
         <hr />
 
         <h2>Character Details</h2>
+        <h3><?= $details['name'] ?> - <?= $details['title'] ?></h3>
+            <ul>
+                <ol>Strength: </ol>
+                <ol>Dexterity: </ol>
+                <ol>Constitution: </ol>
+                <ol>Intelligence: </ol>
+                <ol>Wisdom: </ol>
+                <ol>Charisma: </ol>
+            </ul>
         <hr />
-
-
+        
         <h2>External Resources</h2>
             <p>
                 Do you still feel unprepared? Need DM resources not for players? No worries! Check out this site for more~! <a id="comp" href="https://www.dnd-compendium.com/">The DND Compendium.</a>
