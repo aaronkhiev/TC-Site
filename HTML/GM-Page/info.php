@@ -43,6 +43,39 @@
             <a href="../about.html">About</a>
         </div>
         <hr />
+
+        <h2>External Resources</h2>
+            <p>
+                Do you still feel unprepared? Need DM resources not for players? No worries! Check out this site for more~! <a id="comp" href="https://www.dnd-compendium.com/">The DND Compendium.</a>
+            </p>
+        <hr />
+
+        <h2>Find Players Near You~!</h2>
+            <p>
+                Need people to play with? Use the geolocation tool to grab your location.
+            </p>
+        <hr />
+        <h2>Learn More Here</h2>
+        <div class="subnav">
+            <a href="skills.html"> Skills, Skill Checks, and Success</a>
+            <a href="action.html"> Taking Initiative</a>
+            <a href="spell.html"> Spellcasting 101</a>
+        </div>
+
+        <br />
+        <div id="Contact">
+            <hr />
+            <h3>Contact Us!</h3>
+            <address>
+                <p>
+                    Aaron Khiev:
+                    <a href="mailto:aaron_khiev@uri.edu">aaron_khiev@uri.edu</a>
+                </p>
+            </address>
+        </div>
+    </div>
+    <script src="../../Javascript/ajax-html.js"></script>
+    <script src="../../Javascript/ajax-json.js"></script>
 </body>
 
 </html>
