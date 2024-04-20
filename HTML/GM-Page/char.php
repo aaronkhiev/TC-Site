@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 
 <?php
+	// Include the session script
+	require '../../includes/database-connection.php';
+
+	// Retrieve ALL character info from the characters table. Campaign info will be displayed on another page.
+	$sql = "SELECT * 
+			FROM characters;";
+
+	// Execute the SQL query using the pdo function and fetch the result
+	$chara = pdo($pdo, $sql)->fetchAll();
+?> 
+
+
+<?php
     // Greetings based on whether this page was visited or not. Cookies set to expire in 1 hour.
     $visitor = $_COOKIE['visitor'] ?? 0;
     $visitor = $visitor + 1;
@@ -221,6 +234,18 @@
                 makes a nice surprise when you least expect it. Imagine trying to rob a store only to realize the clerk/NPC standing on the other side
                 of the counter is a retired Gladiator. 
             </p>
+
+        <hr />
+        <h2>Checkout our Character Database here!</h2>
+            <div class="characters">
+					<!-- Create a hyperlink to info.php page with name as parameter -->
+					<a href="info.php?sign=<?= htmlspecialchars($chara[0]['name']) ?>">
+						<!-- Display the name of the character -->
+						<h3><?= $chara[0]['name'] ?></h3>
+					</a>
+					<!-- Display the character's title -->
+					<p><?= $chara[0]['title'] ?></p>
+            </div>
 
         <hr />
         <h2>External Resources</h2>
