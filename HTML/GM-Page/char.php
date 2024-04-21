@@ -12,6 +12,26 @@
 	$chara = pdo($pdo, $sql)->fetchAll();
 ?> 
 
+<?php 
+    if (isset($_POST['submit'])) {
+        $title = $_POST['campTitle'];
+        $theme = $_POST['theme'];
+        $sessions = $_POST['session'];
+
+        $data = [
+            'campTitle' => $title,
+            'theme' => $theme,
+            'session' => intval($sessions),
+        ];
+
+        $sql = "INSERT INTO campaign (campTitle, theme, session)
+        VALUES (:campTitle, theme, session)";
+
+        $vals = $pdo->prepare($sql);
+        $vals->execute($data);
+    }
+?>
+
 <?php
     // Greetings based on whether this page was visited or not. Cookies set to expire in 1 hour.
     $visitor = $_COOKIE['visitor'] ?? 0;
@@ -293,12 +313,13 @@
 					</a>
             </div>
         <hr />
+
         <h2>Create or edit a campaign yourself~!</h2>
-        <form action='insert_camp.php' method='post'>
+        <form method='POST'>
             Campaign Title: <input type='text' name ='campTitle'><br>
             Campaign Theme: <input type='text' name ='theme'><br>
             Number of Sessions: <input type='text' name ='session'><br>
-            <input type='submit' value='Create Campaign'>
+            <button type='submit' name='submit'>Submit</button>
         </form>
 
         <hr />

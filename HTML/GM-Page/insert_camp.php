@@ -3,32 +3,13 @@
 <?php
 	// Include the session script
 	require '../../includes/database-connection.php';
-?>
 
-<?php 
-    $campTitle=$_POST['campTitle'];
-    $theme=$_POST['theme'];
-    $session=$_POST['session'];
-
-    $sql='INSERT INTO campaign (campTitle, theme, session)
-    VALUES (:campTitle, :theme, :session);';
-
-    $newc = ['campTitle'] = $campTitle;
-    $newc = ['theme'] = $theme;
-    $newc = ['session'] = $session;
-
-    $statement = $pdo->prepare($sql);
-    $statement->execute($newc);
-
-    pdo($pdo, $sql, $arguments);
-    $new_id = $pdo->lastInsertId() - 1;    
-
-    // Retrieve ALL character info from the characters table. Campaign info will be displayed on this page.
+	// Retrieve ALL character info from the characters table. Campaign info will be displayed on this page.
 	$sql = "SELECT * 
-    FROM campaign";
+			FROM campaign";
 
-    // Execute the SQL query using the pdo function and fetch the result
-    $camp = pdo($pdo, $sql)->fetchAll();
+	// Execute the SQL query using the pdo function and fetch the result
+	$camp = pdo($pdo, $sql)->fetchAll();
 ?>
 
 <html lang="en">
@@ -65,9 +46,9 @@
 
         <h2>Campaign Created</h2>
         <ul>
-            <li><strong>Campaign Title: </strong><?= $camp[$new_id]['campTitle'] ?></li>
-            <li><strong>Theme: </strong><?= $camp[$new_id]['theme'] ?></li>
-            <li><strong>Sessions Played: </strong><?= $camp[$new_id]['session'] ?></li>
+            <li><strong>Campaign Title: </strong><?= $camp['campTitle'] ?></li>
+            <li><strong>Theme: </strong><?= $camp['theme'] ?></li>
+            <li><strong>Sessions Played: </strong><?= $camp['session'] ?></li>
         </ul>
         <hr />
         
