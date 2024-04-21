@@ -3,13 +3,6 @@
 <?php
 	// Include the session script
 	require '../../includes/database-connection.php';
-
-	// Retrieve ALL character info from the characters table. Campaign info will be displayed on another page.
-	$sql = "SELECT * 
-			FROM characters;";
-
-	// Execute the SQL query using the pdo function and fetch the result
-	$chara = pdo($pdo, $sql)->fetchAll();
  
     if (isset($_POST['submit'])) {
         $title = $_POST['campTitle'];
@@ -25,8 +18,8 @@
         ];
 
         $sql = "UPDATE campaign 
-        SET title= :title, theme= :theme, session= :sessions 
-        WHERE campID=:id";
+        SET campTitle= :campTitle, theme= :theme, session= :session 
+        WHERE campID=:campID";
         $vals = $pdo->prepare($sql);
         $vals->execute($data);
     }
