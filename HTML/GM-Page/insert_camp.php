@@ -67,7 +67,7 @@
                 Campaign ID: <input type='text' name ='campID'><br>
                 <button type='submit' name='submit'>Submit</button>
             </form>
-            <p><?= $upd ?> rows were changed...</p>
+            <p><?= $upd ?> row(s) were changed...</p>
         
         <h2>External Resources</h2>
             <p>

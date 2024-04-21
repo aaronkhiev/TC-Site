@@ -56,13 +56,12 @@
                 Campaign ID: <input type='text' name ='campID'><br>
                 <button type='submit' name='submit'>Submit</button>
             </form>
-            <p><?= $upd ?> rows were changed...</p>
+            <p><?= $upd ?> row(s) were changed...</p>
                 
         <h2>External Resources</h2>
             <p>
                 Do you still feel unprepared? Need DM resources not for players? No worries! Check out this site for more~! <a id="comp" href="https://www.dnd-compendium.com/">The DND Compendium.</a>
             </p>
-        <hr />
 
         <br />
         <div id="Contact">

@@ -98,3 +98,11 @@ body {
 #cen {
     text-align: center;
 }
+
+.corr {
+    background-color: #ac7245dd;
+    padding: 10px 24px;
+    border-radius: 25px;
+    color: rgb(78, 54, 255);
+    display: inline-block;
+}
