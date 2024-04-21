@@ -321,10 +321,10 @@
             </form>
 
         <h2>Update a campaign~!</h2>
-        <a href="insert_camp.php"> Update Here!</a>
+        <a class='corr' href="insert_camp.php"> Update Here!</a>
 
         <h2>Remove a campaign....</h2>
-        <a href="remove_camp.php"> Remove Here...</a>
+        <a class='corr' href="remove_camp.php"> Remove Here...</a>
 
         <hr />
         <h2>External Resources</h2>

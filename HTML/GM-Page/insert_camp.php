@@ -22,6 +22,8 @@
         WHERE campID=:campID";
         $vals = $pdo->prepare($sql);
         $vals->execute($data);
+
+        $upd = $vals->rowCount();
     }
 ?>
 
@@ -65,6 +67,7 @@
                 Campaign ID: <input type='text' name ='campID'><br>
                 <button type='submit' name='submit'>Submit</button>
             </form>
+            <p><?= $upd ?> rows were changed...</p>
         
         <h2>External Resources</h2>
             <p>
