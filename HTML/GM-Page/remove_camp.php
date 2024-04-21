@@ -3,30 +3,15 @@
 <?php
 	// Include the session script
 	require '../../includes/database-connection.php';
-
-	// Retrieve ALL character info from the characters table. Campaign info will be displayed on another page.
-	$sql = "SELECT * 
-			FROM characters;";
-
-	// Execute the SQL query using the pdo function and fetch the result
-	$chara = pdo($pdo, $sql)->fetchAll();
  
     if (isset($_POST['submit'])) {
-        $title = $_POST['campTitle'];
-        $theme = $_POST['theme'];
-        $sessions = $_POST['session'];
         $id = $_POST['campID'];
 
         $data = [
-            'campTitle' => $title,
-            'theme' => $theme,
-            'session' => intval($sessions),
             'campID' => $id,
         ];
 
-        $sql = "INSERT INTO campaign (campTitle, theme, session)
-        VALUES (:campTitle, :theme, :session)";
-
+        $sql = "DELETE FROM campaign WHERE campID=:campID";
         $vals = $pdo->prepare($sql);
         $vals->execute($data);
     }
@@ -64,11 +49,9 @@
         </div>
         <hr />
 
-        <h2>Create a campaign yourself~!</h2>
+        <h2>Remove a campaign...</h2>
             <form method='POST'>
-                Campaign Title: <input type='text' name ='campTitle'><br>
-                Campaign Theme: <input type='text' name ='theme'><br>
-                Number of Sessions: <input type='text' name ='session'><br>
+                Campaign ID: <input type='text' name ='campID'><br>
                 <button type='submit' name='submit'>Submit</button>
             </form>
         

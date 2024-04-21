@@ -57,7 +57,7 @@
         </div>
         <hr />
 
-        <h2>Create a campaign yourself~!</h2>
+        <h2>Update a campaign yourself~!</h2>
             <form method='POST'>
                 Campaign Title: <input type='text' name ='campTitle'><br>
                 Campaign Theme: <input type='text' name ='theme'><br>
