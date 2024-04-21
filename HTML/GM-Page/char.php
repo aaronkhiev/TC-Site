@@ -23,7 +23,7 @@
         ];
 
         $sql = "INSERT INTO campaign (campTitle, theme, session)
-        VALUES (:campTitle, theme, session)";
+        VALUES (:campTitle, :theme, :session)";
 
         $vals = $pdo->prepare($sql);
         $vals->execute($data);
