@@ -24,8 +24,9 @@
             'session' => intval($sessions),
         ];
 
-        $sql = "UPDATE campaign SET title=:name, theme=:theme, session=:sessions WHERE campID=:campID";
-
+        $sql = "UPDATE campaign 
+        SET title= :title, theme= :theme, session= :sessions 
+        WHERE campID=:id";
         $vals = $pdo->prepare($sql);
         $vals->execute($data);
     }
