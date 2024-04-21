@@ -6,7 +6,7 @@
 
     $select = $_GET['charID'];
 
-	// Retrieve ALL character info from the characters table. Campaign info will be displayed on another page.
+	// Retrieve ALL character info from the characters table. Campaign info will be displayed on this page.
 	$sql = "SELECT * 
 			FROM characters
             JOIN campaign ON characters.campID = campaign.campID
@@ -91,8 +91,6 @@
             </address>
         </div>
     </div>
-    <script src="../../Javascript/ajax-html.js"></script>
-    <script src="../../Javascript/ajax-json.js"></script>
 </body>
 
 </html>

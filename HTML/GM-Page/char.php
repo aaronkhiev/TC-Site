@@ -292,6 +292,14 @@
 						<h3><?= $chara[7]['name'] ?> - <?= $chara[7]['title'] ?></h3>
 					</a>
             </div>
+        <hr />
+        <h2>Create or edit a campaign yourself~!</h2>
+        <form action='insert_camp.php' method='post'>
+            Campaign Title: <input type='text' name ='campTitle'><br>
+            Campaign Theme: <input type='text' name ='theme'><br>
+            Number of Sessions: <input type='text' name ='session'><br>
+            <input type='submit' value='Create Campaign'>
+        </form>
 
         <hr />
         <h2>External Resources</h2>
