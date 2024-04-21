@@ -73,7 +73,6 @@
             <p>
                 Do you still feel unprepared? Need DM resources not for players? No worries! Check out this site for more~! <a id="comp" href="https://www.dnd-compendium.com/">The DND Compendium.</a>
             </p>
-        <hr />
 
         <br />
         <div id="Contact">
