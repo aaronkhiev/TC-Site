@@ -13,6 +13,7 @@
 ?> 
 
 <?php 
+    require '../../includes/database-connection.php';
     if (isset($_POST['submit'])) {
         $title = $_POST['campTitle'];
         $theme = $_POST['theme'];
