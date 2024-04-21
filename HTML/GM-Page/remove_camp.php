@@ -18,13 +18,14 @@
         $id = $_POST['campID'];
 
         $data = [
-            'campID' => $id,
             'campTitle' => $title,
             'theme' => $theme,
             'session' => intval($sessions),
+            'campID' => $id,
         ];
 
-        $sql = "UPDATE campaign SET title=:name, theme=:theme, session=:sessions WHERE campID=:campID";
+        $sql = "INSERT INTO campaign (campTitle, theme, session)
+        VALUES (:campTitle, :theme, :session)";
 
         $vals = $pdo->prepare($sql);
         $vals->execute($data);

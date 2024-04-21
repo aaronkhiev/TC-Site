@@ -312,13 +312,19 @@
             </div>
         <hr />
 
-        <h2>Create or edit a campaign yourself~!</h2>
-        <form method='POST'>
-            Campaign Title: <input type='text' name ='campTitle'><br>
-            Campaign Theme: <input type='text' name ='theme'><br>
-            Number of Sessions: <input type='text' name ='session'><br>
-            <button type='submit' name='submit'>Submit</button>
-        </form>
+        <h2>Create a campaign yourself~!</h2>
+            <form method='POST'>
+                Campaign Title: <input type='text' name ='campTitle'><br>
+                Campaign Theme: <input type='text' name ='theme'><br>
+                Number of Sessions: <input type='text' name ='session'><br>
+                <button type='submit' name='submit'>Submit</button>
+            </form>
+
+        <h2>Update a campaign~!</h2>
+        <a href="insert_camp.php"> Update Here!</a>
+
+        <h2>Remove a campaign....</h2>
+        <a href="remove_camp.php"> Remove Here...</a>
 
         <hr />
         <h2>External Resources</h2>
@@ -326,18 +332,6 @@
                 Do you still feel unprepared? Need DM resources not for players? No worries! Check out this site for more~! <a id="comp" href="https://www.dnd-compendium.com/">The DND Compendium.</a>
             </p>
         <hr />
-
-        <h2>Find Players Near You~!</h2>
-            <p>
-                Need people to play with? Use the geolocation tool to grab your location.
-            </p>
-        <hr />
-        <h2>Learn More Here</h2>
-        <div class="subnav">
-            <a href="skills.html"> Skills, Skill Checks, and Success</a>
-            <a href="action.html"> Taking Initiative</a>
-            <a href="spell.html"> Spellcasting 101</a>
-        </div>
 
         <br />
         <div id="Contact">
