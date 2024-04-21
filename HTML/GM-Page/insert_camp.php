@@ -68,6 +68,7 @@
                 Campaign Title: <input type='text' name ='campTitle'><br>
                 Campaign Theme: <input type='text' name ='theme'><br>
                 Number of Sessions: <input type='text' name ='session'><br>
+                Campaign ID: <input type='text' name ='campID'><br>
                 <button type='submit' name='submit'>Submit</button>
             </form>
         
