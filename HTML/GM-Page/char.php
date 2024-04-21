@@ -10,9 +10,7 @@
 
 	// Execute the SQL query using the pdo function and fetch the result
 	$chara = pdo($pdo, $sql)->fetchAll();
-?> 
-
-<?php 
+ 
     if (isset($_POST['submit'])) {
         $title = $_POST['campTitle'];
         $theme = $_POST['theme'];
