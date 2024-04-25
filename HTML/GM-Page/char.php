@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-	// Include the session script
+	// Include the database script
 	require '../../includes/database-connection.php';
 
 	// Retrieve ALL character info from the characters table. Campaign info will be displayed on another page.
@@ -11,6 +11,7 @@
 	// Execute the SQL query using the pdo function and fetch the result
 	$chara = pdo($pdo, $sql)->fetchAll();
  
+    // This section will grab the form inputs when hitting submit and add this to the database.
     if (isset($_POST['submit'])) {
         $title = $_POST['campTitle'];
         $theme = $_POST['theme'];
@@ -148,6 +149,7 @@
             </div>
         </section>
 
+        <!-- Displaying character information from the character.php file. -->
         <section>
             <h2 class="center">Basic Character Profiles</h2>
             <p>
@@ -215,6 +217,7 @@
 
             <?= $message ?>
             
+            <!-- Custom character for users can use to display their own character. -->
             <form action="char.php" method="POST">
             <strong>Name:</strong> <input type='text' name='name' value='<?= htmlspecialchars($user['name']) ?>'>
                     <span class='error'><?= $errors['name'] ?></span><br>

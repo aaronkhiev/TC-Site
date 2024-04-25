@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-	// Include the session script
+	// Include the database script
 	require '../../includes/database-connection.php';
  
     if (isset($_POST['submit'])) {
@@ -18,6 +18,8 @@
         $upd = $vals->rowCount();
     }
 ?>
+
+<!--The php above will go into the campaign database based on the entered ID and remove that campaign-->
 
 <html lang="en">
 

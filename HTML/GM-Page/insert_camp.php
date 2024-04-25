@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-	// Include the session script
+	// Include the database script
 	require '../../includes/database-connection.php';
  
     if (isset($_POST['submit'])) {
@@ -26,6 +26,7 @@
         $upd = $vals->rowCount();
     }
 ?>
+<!--PHP above will update the campaign entry depending on the ID entered.-->
 
 <html lang="en">
 
@@ -58,7 +59,7 @@
             <a href="../about.html">About</a>
         </div>
         <hr />
-
+        <!--This form will update the campaign in the database and print the rows updated-->
         <h2>Update a campaign yourself~!</h2>
             <form method='POST'>
                 Campaign Title: <input type='text' name ='campTitle'><br>

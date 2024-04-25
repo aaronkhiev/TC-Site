@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 
 <?php
-	// Include the session script
+	// Include the database script
 	require '../../includes/database-connection.php';
 
+    // Grab the character ID from the URL.
     $select = $_GET['charID'];
 
 	// Retrieve ALL character info from the characters table. Campaign info will be displayed on this page.
@@ -48,6 +49,7 @@
         </div>
         <hr />
 
+        <!-- Using placeholders, this page will display all of the character info depending on the link that was clicked -->
         <h2>Character Details</h2>
         <h3><?= $details['name'] ?> - <?= $details['title'] ?></h3>
             <ul>
@@ -58,6 +60,8 @@
                 <li><strong>Wisdom: </strong><?= $details['wisdom'] ?></li>
                 <li><strong>Charisma: </strong><?= $details['charisma'] ?></li>
             </ul>
+
+        <!-- The campaign info is also displayed in this section. Using the JOIN command and campID as the foreign key, we can retrieve the campaigns each character is assigned to -->
         <h3>Campaign Involvement</h3>
         <ul>
             <li><strong>Campaign Title: </strong><?= $details['campTitle'] ?></li>
